@@ -23,9 +23,7 @@ jobs:
           submodules: recursive
 
       - name: Configure CMake
-        run: |
-          cmake -B build \
-            -DCMAKE_BUILD_TYPE=Debug
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Debug
 
       - name: Build
         run: cmake --build build --config Debug
