@@ -34,8 +34,15 @@ jobs:
             libxcursor-dev \
             libxi-dev \
             libxss-dev \
+            libxtst-dev \
             libxkbcommon-dev \
-            libwayland-dev
+            libwayland-dev \
+            libpulse-dev \
+            libasound2-dev \
+            libgl-dev \
+            libgles2-mesa-dev \
+            libudev-dev \
+            libdbus-1-dev
 
       - name: Configure CMake
         run: cmake -B build -DCMAKE_BUILD_TYPE=Debug
