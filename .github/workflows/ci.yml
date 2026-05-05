@@ -22,6 +22,21 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libx11-dev \
+            libxext-dev \
+            libxrandr-dev \
+            libxinerama-dev \
+            libxcursor-dev \
+            libxi-dev \
+            libxss-dev \
+            libxkbcommon-dev \
+            libwayland-dev
+
       - name: Configure CMake
         run: cmake -B build -DCMAKE_BUILD_TYPE=Debug
 
